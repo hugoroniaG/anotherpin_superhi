@@ -55,6 +55,8 @@ gem "active_link_to"
 
 gem "simple_form"
 
+gem "country_select"
+
 gem 'carrierwave', '~> 2.0'
 
 gem "mini_magick"
@@ -64,6 +66,8 @@ gem "fog-aws"
 gem "devise"
 
 gem "activeadmin"
+
+gem "stripe"
 
 
 

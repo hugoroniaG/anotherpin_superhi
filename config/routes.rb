@@ -7,6 +7,13 @@ Rails.application.routes.draw do
     resources :order_items
   end
   
+  # we want our users to order multiple times
+  resources :orders
+  
+  
+  # we only want a user to see one cart
+  resource :cart
+  
   get "info", to: "pages#info"
   
   root "pages#home"
