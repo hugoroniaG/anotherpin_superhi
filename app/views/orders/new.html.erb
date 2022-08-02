@@ -27,6 +27,35 @@ Total number of items: <%= @order.order_items.size %>
 <% end %>
 
 <script>
+	// load the fonts in
+	var fonts = [
+		{
+		  cssSrc: "https://fonts.googleapis.com/css?family=Karla"
+		}
+	  ]
+	  
+	  // styles for the stripe inputs
+	var styles = {
+		base: {
+		iconColor: "#cccccc",
+		color: "#000000",
+		fontFamily: "Karla, Helvetica, Arial, sans-serif",
+		fontSize: "16px",
+		  
+		"::placeholder": {
+			color: "#cccccc"
+		  },
+		":-webkit-autofill": {
+			color: "#cccccc"
+		  }
+		},
+		invalid: {
+		  iconColor: "#FFC7EE",
+		  color: "#A31621"
+		}
+	  }
+
+	
   var stripe = Stripe("<%= Rails.application.credentials.stripe_public_key %>")
   var elements = stripe.elements()
 
